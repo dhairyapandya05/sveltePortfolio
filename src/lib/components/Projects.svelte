@@ -32,7 +32,7 @@
             projectLink: 'https://github.com/dhairyapandya05/HumanAnatomyUsingAR',
             demoLink: 'https://youtu.be/BYauAB3e5jw',
             duration: 'January 2019',
-            imageSrc: '/path/to/anatoly-image.jpg' // Replace with actual image path
+            imageSrc: 'anato.png' // Replace with actual image path
         }
     ];
 </script>

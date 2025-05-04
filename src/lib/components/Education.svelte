@@ -23,38 +23,37 @@
 		<h2 class="mb-12 text-center text-3xl font-bold text-gray-900 ">Education</h2>
 		<div class="space-y-8">
 			{#each education as exp, i}
-				<div
-					class="card rounded-lg bg-white p-6 shadow dark:bg-gray-700"
-					bind:this={educationCards[i]}
-					on:mousemove={(e) => handleMouseMove(e, i)}
-				>
-					<div class="card-content flex items-center">
-						<!-- Company Logo on the left -->
-						<div class="mr-6 flex-shrink-0">
-							{#if exp.logo}
-								<img src={exp.logo} alt="{exp.company} logo" class="h-16 w-16 object-contain" />
-							{:else}
-								<!-- Fallback logo placeholder -->
-								<div
-									class="flex h-16 w-16 items-center justify-center rounded-full bg-gray-200 text-gray-500 dark:bg-gray-600 dark:text-gray-300"
-								>
-									{exp.company.charAt(0)}
-								</div>
-							{/if}
+			<div 
+			class="card rounded-lg bg-white p-6 shadow dark:bg-gray-200"
+			bind:this={educationCards[i]}
+			on:mousemove={(e) => handleMouseMove(e, i)}
+		>
+			<div class="card-content flex items-center">
+				<!-- Company Logo on the left -->
+				<div class="mr-6 flex-shrink-0">
+					{#if exp.logo}
+						<img src={exp.logo} alt="{exp.company} logo" class="h-16 w-16 object-contain" />
+					{:else}
+						<!-- Fallback logo placeholder -->
+						<div class="flex h-16 w-16 items-center justify-center rounded-full bg-gray-200 text-gray-500 dark:bg-gray-600 dark:text-gray-300">
+							{exp.company.charAt(0)}
 						</div>
-
-						<!-- Text content on the right -->
-						<div class="flex-1">
-							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">{exp.title}</h3>
-							<div class="mb-2 flex items-center text-gray-600 dark:text-gray-300">
-								<span>{exp.company}</span>
-								<span class="mx-2">•</span>
-								<span>{exp.period}</span>
-							</div>
-							<p class="text-gray-600 dark:text-gray-300">{exp.description}</p>
-						</div>
-					</div>
+					{/if}
 				</div>
+				
+				<!-- Text content on the right -->
+				<div class="flex-1">
+					<h3 class="text-xl font-semibold text-gray-900">{exp.title}</h3>
+					<div class="mb-2 flex items-center">
+						<span class="text-gray-700  font-medium">{exp.company}</span>
+						<span class="mx-2 text-gray-500 ">•</span>
+						<span class="text-gray-500 ">{exp.period}</span>
+					</div>
+					<p class="text-gray-500  leading-relaxed">{exp.description}</p>
+				</div>
+				
+			</div>
+		</div>
 			{/each}
 		</div>
 	</div>

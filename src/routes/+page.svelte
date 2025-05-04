@@ -40,10 +40,18 @@
 	<Education />
 		<Experience />
 		<Projects />
-		<Heatmap />
+		<main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<Heatmap />
+
+			<div class="flex mx-center gap-x-12">
+				<LineChart />
+				<TrafficChart />
+			</div>
 		
-			<LineChart />
-			<TrafficChart />
+			
+			
+		</main>
+		
 		
 
 		<Contact />

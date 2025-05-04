@@ -43,14 +43,15 @@
 						
 						<!-- Text content on the right -->
 						<div class="flex-1">
-							<h3 class="text-xl font-semibold text-gray-900 dark:text-white">{exp.title}</h3>
-							<div class="mb-2 flex items-center text-gray-600 dark:text-gray-300">
-								<span>{exp.company}</span>
-								<span class="mx-2">•</span>
-								<span>{exp.period}</span>
+							<h3 class="text-xl font-semibold text-gray-900">{exp.title}</h3>
+							<div class="mb-2 flex items-center">
+								<span class="text-gray-700  font-medium">{exp.company}</span>
+								<span class="mx-2 text-gray-500 ">•</span>
+								<span class="text-gray-500 ">{exp.period}</span>
 							</div>
-							<p class="text-gray-600 dark:text-gray-300">{exp.description}</p>
+							<p class="text-gray-500  leading-relaxed">{exp.description}</p>
 						</div>
+						
 					</div>
 				</div>
 			{/each}

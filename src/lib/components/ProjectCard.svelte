@@ -15,8 +15,8 @@
     <div class="items-center flex flex-col md:flex-row {isReversed ? 'md:flex-row-reverse' : ''}">
 
         <!-- Image Section -->
-        <div class="md:w-1/3 w-full p-4">
-            <div class="h-fit w-full bg-gray-100 overflow-hidden">
+        <div class="md:w-1/3 w-full p-4 round-3xl">
+            <div class="h-fit w-full overflow-hidden round-3xl">
                 {#if imageSrc}
                     <img src={imageSrc} alt={title}
                         class="w-full h-full object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-500" />
