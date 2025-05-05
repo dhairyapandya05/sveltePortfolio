@@ -231,7 +231,7 @@
 	}
 </script>
 
-<div class="relative rounded-xl p-4 text-white shadow-lg">
+<div id="coding" class="relative rounded-xl p-4 text-white shadow-lg">
 	<h2 class="mb-4 text-2xl font-bold">Activity Heatmap</h2>
 	<div bind:this={heatmapContainer} class="w-full overflow-x-auto"></div>
 	<div

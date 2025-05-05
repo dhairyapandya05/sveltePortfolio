@@ -194,7 +194,7 @@
 			
 			<A
 				href="https://leetcode.com/u/dhairyapandya05/"
-				class="hover:text-primary-700 dark:hover:text-primary-500 rounded-lg px-3 py-2 text-sm font-semibold uppercase hover:bg-gray-100 hover:no-underline dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+				class="hover:text-primary-700 dark:hover:text-primary-500 rounded-lg px-3 py-2 text-sm font-semibold uppercase hover:bg-gray-100 hover:no-underline dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700 text-white"
 			>
 				Profile Link
 				<ChevronRightOutline class="ms-1.5 h-2.5 w-2.5" />

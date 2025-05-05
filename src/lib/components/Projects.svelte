@@ -22,7 +22,7 @@
             imageSrc: 'zeepserviceproject.png' // Replace with actual image path
         },
         {
-            title: 'Anato AR (Immersive Human Anatomy in Augmented Reality)',
+            title: 'Anato AR (Immersive Human Anatomy in XR)',
             description: 'An augmented reality application for interactive human anatomy learning with high performance and intuitive controls.',
             points: [
                 'Enhanced AR immersion with real-time light adaptation and 60 FPS dynamic shadows using OpenGL ES, supporting API 24+ and 97.4% device compatibility.',
@@ -37,11 +37,11 @@
     ];
 </script>
 
-<section class="py-16 px-4 bg-gray-50">
+<section id="projects" class="py-16 px-4 bg-gray-50">
     <div class="max-w-6xl mx-auto">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <h2 class="uppercase text-sm font-medium tracking-wider text-gray-700 mb-2">PORTFOLIO</h2>
+            <!-- <h2 class="uppercase text-sm font-medium tracking-wider text-gray-700 mb-2">PORTFOLIO</h2> -->
             <h3 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-6">Projects</h3>
             <p class="text-gray-700 max-w-3xl mx-auto">
                 A showcase of my key software development projects. Each demonstrates unique 

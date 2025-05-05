@@ -26,15 +26,14 @@
     ];
 </script>
 
-<section class="py-16 px-4 bg-white">
+<section id="testimonials" class="py-16 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
         <!-- Section Header -->
         <div class="text-center mb-12">
-            <h2 class="uppercase text-sm font-medium tracking-wider text-gray-700 mb-2">TESTIMONIALS</h2>
-            <h3 class="text-4xl md:text-5xl font-bold text-green-600 mb-6">What Clients Say</h3>
+            <h2 class="uppercase text-sm font-medium tracking-wider text-gray-700 mb-2">RECOMMENDATIONS</h2>
+            <h3 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-6">What My Professors Say</h3>
             <p class="text-gray-700 max-w-3xl mx-auto">
-                We place huge value on strong relationships and have seen the benefit they bring to our business. 
-                Customer feedback is vital in helping us to get it right.
+                These testimonials from my esteemed professors reflect my dedication, technical skills, and commitment to excellence during my academic journey.
             </p>
         </div>
         

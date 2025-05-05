@@ -32,31 +32,26 @@
 
 <div class="min-h-screen bg-white transition-colors duration-300 dark:bg-gray-900">
 	<Navbar />
-	<main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-		<Hero />
-		<About />
-		
-	</main>
+
+	<Hero />
+	<About />
+
 	<Education />
-		<Experience />
-		<Projects />
-		<main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+	<Experience />
+	<Projects />
+	<main class="mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="py-4">
 			<Heatmap />
+		</div>
 
-			<div class="flex mx-center gap-x-12">
-				<LineChart />
-				<TrafficChart />
-			</div>
-		
-			
-			
-		</main>
-		
-		
-
-		<Contact />
-	<StatisticsCard />
-	<BatchStack />
+		<div class="mt-6 flex flex-col items-center justify-center gap-y-8 lg:flex-row lg:gap-x-12">
+			<LineChart />
+			<TrafficChart />
+		</div>
+		<StatisticsCard />
+		<BatchStack />
+	</main>
 	<TestimonialsStack />
+	<Contact />
 	<Footer />
 </div>

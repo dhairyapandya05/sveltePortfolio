@@ -1,35 +1,65 @@
 <script>
-    export let name = '';
-    export let role = '';
-    export let quote = '';
-    export let imageSrc = '';
+	export let name = '';
+	export let role = '';
+	export let quote = '';
+	export let imageSrc = '';
 </script>
 
-<div class="bg-gray-100 p-8 rounded-lg flex flex-col items-center h-92">
-    <!-- Profile Image -->
-    <div class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-white shadow">
-        {#if imageSrc}
-            <img src={imageSrc} alt={name} class="w-full h-full object-cover" />
-        {:else}
-            <!-- Default placeholder if no image provided -->
-            <div class="w-full h-full bg-gray-300 flex items-center justify-center">
-                <span class="text-gray-500 text-2xl">{name.charAt(0)}</span>
-            </div>
-        {/if}
-    </div>
-    
-    <!-- Quote -->
-    <div class="text-center mb-6">
-        <div class="text-gray-600 italic relative">
-            <span class="text-4xl font-serif text-gray-400 absolute -left-4 -top-2">"</span>
-            <p class="text-gray-700">{quote}</p>
-            <span class="text-4xl font-serif text-gray-400 inline-block">"</span>
-        </div>
-    </div>
-    
-    <!-- Name and Role -->
-    <div class="text-center">
-        <h3 class="text-green-600 font-medium text-xl mb-1">{name}</h3>
-        <p class="text-gray-600">{role}</p>
-    </div>
+<!-- Testimonial Card -->
+<div class="card h-92 flex flex-col items-center rounded-lg bg-gray-100 p-8 shadow-lg">
+	<!-- Profile Image -->
+	<div class="mb-6 h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow">
+		{#if imageSrc}
+			<img src={imageSrc} alt={name} class="h-full w-full object-cover" />
+		{:else}
+			<!-- Default placeholder if no image provided -->
+			<div class="flex h-full w-full items-center justify-center bg-gray-300">
+				<span class="text-2xl text-gray-500">{name.charAt(0)}</span>
+			</div>
+		{/if}
+	</div>
+
+	<!-- Quote -->
+	<div class="mb-6 text-center">
+		<div class="relative italic text-gray-600">
+			<span class="absolute -left-4 -top-2 font-serif text-4xl text-gray-400">"</span>
+			<p class="text-gray-700">{quote}</p>
+			<span class="inline-block font-serif text-4xl text-gray-400">"</span>
+		</div>
+	</div>
+
+	<!-- Name and Role -->
+	<div class="text-center">
+		<h3 class="mb-1 text-xl font-medium text-indigo-600">{name}</h3>
+		<p class="text-gray-600">{role}</p>
+	</div>
 </div>
+
+<style>
+	@keyframes scaleFade {
+		/* Entry phase */
+		0% {
+			opacity: 0;
+			transform: translateY(20px) scale(0.8);
+		}
+		30% {
+			opacity: 1;
+			transform: translateY(0px) scale(1);
+		}
+		/* Exit phase */
+		100% {
+			opacity: 0;
+			transform: translateY(20px) scale(0.8);
+		}
+	}
+
+	.card {
+		animation-name: scaleFade;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: both;
+		animation-timeline: view();
+		animation-range:
+			entry 0% cover 30%,
+			exit 70% exit 100%;
+	}
+</style>

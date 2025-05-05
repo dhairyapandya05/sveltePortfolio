@@ -62,11 +62,11 @@ let levels=['Easy', 'Medium', 'Hard'];
 
 legend: {
   position: 'bottom',
-  fontSize: '14px',              // ✅ Sets font size
-  fontWeight: 600,               // ✅ Sets font weight
+  fontSize: '14px',              
+  fontWeight: 600,               
   labels: {
-    colors: ['#1E293B'],         // ✅ Set custom text color
-    useSeriesColors: false       // ❌ disables auto color from series
+    colors: ['#1E293B'],         
+    useSeriesColors: false       
   },
   formatter: function (val: string, opts: any) {
     // Return legend text as a string
@@ -107,7 +107,7 @@ legend: {
   </div>
 
   <!-- Donut Chart -->
-  <div class="py-6">
+  <div class="py-12">
     <Chart {options} />
   </div>
 
