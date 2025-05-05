@@ -36,30 +36,21 @@
 </div>
 
 <style>
-	@keyframes scaleFade {
-		/* Entry phase */
-		0% {
-			opacity: 0;
-			transform: translateY(20px) scale(0.8);
+	@keyframes fadeInUp {
+		from {
+			opacity: 0.25;
+			transform: translateY(20px) scale(0.5);
 		}
-		30% {
+		to {
 			opacity: 1;
 			transform: translateY(0px) scale(1);
-		}
-		/* Exit phase */
-		100% {
-			opacity: 0;
-			transform: translateY(20px) scale(0.8);
 		}
 	}
 
 	.card {
-		animation-name: scaleFade;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: both;
+		animation: fadeInUp forwards;
 		animation-timeline: view();
-		animation-range:
-			entry 0% cover 30%,
-			exit 70% exit 100%;
+		animation-timing-function: ease-in-out;
+		animation-range: entry 0% cover 30%;
 	}
 </style>

@@ -6,7 +6,7 @@
 	export let description: string = '';
 	let showTooltip = false;
 	let cardElement: HTMLDivElement;
-	
+
 	function handleMouseMove(event: MouseEvent) {
 		if (!cardElement) return;
 		const rect = cardElement.getBoundingClientRect();
@@ -17,17 +17,17 @@
 	}
 </script>
 
-<div 
-	bind:this={cardElement} 
+<div
+	bind:this={cardElement}
 	class="card"
 	role="button"
-	on:mouseenter={() => showTooltip = true}
-	on:mouseleave={() => showTooltip = false}
+	on:mouseenter={() => (showTooltip = true)}
+	on:mouseleave={() => (showTooltip = false)}
 	on:mousemove={handleMouseMove}
 >
 	<div class="card-content">
 		{#if src}
-			<img src={src} alt={title} class="card-image" />
+			<img {src} alt={title} class="card-image" />
 		{:else}
 			<div class="card-image placeholder">
 				<span class="emoji">🏅</span>
@@ -61,8 +61,14 @@
 		width: 160px;
 		position: relative;
 		border: 1px solid var(--border-color);
-		transition: transform 0.25s ease, box-shadow 0.25s ease;
+		transition:
+			transform 0.25s ease,
+			box-shadow 0.25s ease;
 		overflow: hidden;
+		animation: fadeInUp forwards;
+		animation-timeline: view();
+		animation-timing-function: ease-in-out;
+		animation-range: entry 0% cover 30%;
 	}
 
 	.card:hover {
@@ -78,7 +84,7 @@
 	.card::before,
 	.card::after {
 		border-radius: inherit;
-		content: "";
+		content: '';
 		height: 100%;
 		left: 0px;
 		opacity: 0;
@@ -91,16 +97,16 @@
 
 	.card::before {
 		background: radial-gradient(
-			500px circle at var(--mouse-x) var(--mouse-y), 
+			500px circle at var(--mouse-x) var(--mouse-y),
 			rgba(255, 255, 255, 0.15),
 			transparent 20%
 		);
 		z-index: 3;
 	}
 
-	.card::after {  
+	.card::after {
 		background: radial-gradient(
-			100px circle at var(--mouse-x) var(--mouse-y), 
+			100px circle at var(--mouse-x) var(--mouse-y),
 			rgba(255, 255, 255, 0.5),
 			transparent 20%
 		);
@@ -163,7 +169,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 50;
-		background-color: #2A2F3A;
+		background-color: #2a2f3a;
 		padding: 6px;
 		border-radius: 8px;
 		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -179,8 +185,14 @@
 	}
 
 	@keyframes fadeIn {
-		from { opacity: 0; transform: translate(-50%, 10px); }
-		to { opacity: 1; transform: translate(-50%, 0); }
+		from {
+			opacity: 0;
+			transform: translate(-50%, 10px);
+		}
+		to {
+			opacity: 1;
+			transform: translate(-50%, 0);
+		}
 	}
 
 	@media (max-width: 400px) {
@@ -196,6 +208,16 @@
 
 		.card-title {
 			font-size: 0.9rem;
+		}
+	}
+	@keyframes fadeInUp {
+		from {
+			opacity: 0.25;
+			transform: translateX(-100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0px);
 		}
 	}
 </style>
