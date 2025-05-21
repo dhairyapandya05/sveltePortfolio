@@ -11,7 +11,7 @@ export const education = [
 	},
 	{
 		title: 'Higher Secondary Education (Science - PCM)',
-		company: 'XYZ Higher Secondary School',
+		company: 'Kokilaben Dhirubhai Ambani Reliance Foundation School',
 		period: 'Jun 2018 – Mar 2020',
 		description: `• Completed coursework in Physics, Chemistry, and Mathematics.
 • Participated in coding competitions and science exhibitions.`,
